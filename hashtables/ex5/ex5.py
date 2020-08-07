@@ -6,7 +6,15 @@ def finder(files, queries):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    hashmap = dict(zip(queries, files))
+    result = []
+    for i in files:
+        if i in hashmap:
+            hashmap[i].append(i)
+        else:
+            hashmap[i] = []
+            hashmap[i].append(i)
+    print(result)
 
     return result
 
